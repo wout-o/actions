@@ -99,7 +99,7 @@
                     return
                 }
 
-                $wire.unmountTableAction(false)
+                $wire.unmountTableAction(false, false)
             "
             x-on:opened-form-component-action-modal.window="if ($event.detail.id === '{{ $this->getId() }}') close()"
         >

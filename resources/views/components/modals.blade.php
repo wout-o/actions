@@ -37,7 +37,7 @@
                     return
                 }
 
-                $wire.unmountAction(false)
+                $wire.unmountAction(false, false)
             "
             x-on:opened-form-component-action-modal.window="if ($event.detail.id === '{{ $this->getId() }}') close()"
         >
@@ -217,7 +217,7 @@
                     return
                 }
 
-                $wire.unmountInfolistAction(false)
+                $wire.unmountInfolistAction(false, false)
             "
             x-on:opened-form-component-action-modal.window="if ($event.detail.id === '{{ $this->getId() }}') close()"
         >
@@ -271,7 +271,7 @@
                 const mountedFormComponentActionShouldOpenModal = {{ \Illuminate\Support\Js::from($action && $this->mountedFormComponentActionShouldOpenModal()) }}
 
                 if (mountedFormComponentActionShouldOpenModal) {
-                    $wire.unmountFormComponentAction(false)
+                    $wire.unmountFormComponentAction(false, false)
                 }
             "
         >
